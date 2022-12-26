@@ -3,6 +3,7 @@ import { IoIosPersonAdd } from "react-icons/io";
 // Components
 import AddPlayerModal from '../../components/AddPlayerModal/AddPlayerModal';
 import PageHeader from '../../components/PageHeader/PageHeader';
+import PageWrapper from "../../components/PageWrapper/PageWrapper";
 import { BlueButton } from '../../components/Buttons/Buttons';
 import Modal from '../../components/Modal/Modal';
 
@@ -29,7 +30,7 @@ function Players() {
   }
 
   return (
-    <div className='players-page-container'>
+    <PageWrapper>
       <PageHeader text="PLAYERS" />
 
       <div className='buttons-container'>
@@ -62,7 +63,7 @@ function Players() {
       </div>
 
       <Modal />
-    </div>
+    </PageWrapper>
   )
 }
 
