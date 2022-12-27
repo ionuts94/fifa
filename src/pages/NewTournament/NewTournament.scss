@@ -1,0 +1,92 @@
+.new-tournament-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .new-tournament-container {
+    width: 96%;
+    height: 96%;
+    background: rgba(0, 0, 0, .9);
+    border-radius: 8px;
+    box-shadow: 0 0 20px white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    .tm-players-container {
+      margin-top: 1rem;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      .tm-players-box {
+        height: 50px;
+        width: 300px;
+        border-radius: 4px;
+        border: 2px solid var(--blue-gray);
+        position: relative;
+        display: flex;
+        gap: 10px;
+
+        align-items: center;
+        box-sizing: border-box;
+
+        .player-label-container {
+          font-size: 2rem;
+          color: white;
+          background-color: var(--green);
+          height: fit-content;
+          padding: 0.6rem;
+          border-radius: 4px;
+          width: 30%;
+          text-align: center;
+          cursor: pointer;
+        }
+
+        .tm-players-pick {
+          width: 100%;
+          background-color: var(--white);
+          padding: 1rem;
+          box-sizing: border-box;
+          border-radius: 0.4rem;
+          position: absolute;
+          top: 60px;
+
+          h1 {
+            padding: 0.2rem;
+            box-sizing: border-box;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            margin: 0.5rem 0;
+            border-radius: 0.4rem;
+            transition: 0.4s ease-in-out;
+
+            &:hover {
+              background-color: var(--blue-gray);
+            }
+          }
+        }
+
+        .fa-add-button {
+          position: absolute;
+          right: 5px;
+          top: 10px;
+          background-color: white;
+          border-radius: 50%;
+          height: max-content;
+          width: max-content;
+          padding: 0;
+          font-size: 3rem;
+          color: var(--blue);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

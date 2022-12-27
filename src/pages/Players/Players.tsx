@@ -6,6 +6,7 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 import PageWrapper from "../../components/PageWrapper/PageWrapper";
 import { BlueButton } from '../../components/Buttons/Buttons';
 import Modal from '../../components/Modal/Modal';
+import Table from "../../components/Table/Table";
 
 // Redux
 import { useSelector, useDispatch } from 'react-redux';
@@ -41,26 +42,25 @@ function Players() {
         />
       </div>
 
-      <div className='players-list'>
-        <table className='players-table-list'>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Wins</th>
-              <th>Lost</th>
-            </tr>
-          </thead>
-          <tbody>
-            {playersData?.map(player => (
-              <tr key={player.name}>
-                <td>{player.name}</td>
-                <td>{player.win}</td>
-                <td>{player.lost}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <Table>
+        <Table.Head>
+          <Table.Row>
+            <Table.Header>Name</Table.Header>
+            <Table.Header>Wins</Table.Header>
+            <Table.Header>Lost</Table.Header>
+          </Table.Row>
+        </Table.Head>
+
+        <Table.Body>
+          {playersData?.map(player => (
+            <Table.Row key={player.name}>
+              <Table.Data>{player.name}</Table.Data>
+              <Table.Data>{player.win}</Table.Data>
+              <Table.Data>{player.lost}</Table.Data>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </Table>
 
       <Modal />
     </PageWrapper>
